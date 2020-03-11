@@ -1,2 +1,2 @@
 # Navi-Cheatsheets
-Personal cheatsheets for interactive tool Navi
+Personal cheatsheets for interactive tool [navi](https://github.com/denisidoro/navi)
