@@ -1,0 +1,12 @@
+% navi_cheatsheet
+
+# test1
+s1 test1
+
+# test2
+s2 test2
+
+$ package: brew search
+$ casks: brew search --casks
+$ installed: brew list
+$ caskinstalled: brew cask list
