@@ -6,6 +6,9 @@ s1 test1
 # test2
 s2 test2
 
+# test3
+s3 test3
+
 $ package: brew search
 $ casks: brew search --casks
 $ installed: brew list
