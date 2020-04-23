@@ -9,6 +9,12 @@ s2 test2
 # test3
 s3 test3
 
+# nativefier
+nativefier -n "Name" "xxx.com"
+
+# nativefier for Windows
+nativefier -n "Name" -p windows "xxx.com"
+
 $ package: brew search
 $ casks: brew search --casks
 $ installed: brew list
