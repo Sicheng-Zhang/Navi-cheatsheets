@@ -10,10 +10,10 @@ s2 test2
 s3 test3
 
 # nativefier
-nativefier -n "Name" "xxx.com"
+nativefier -n [name] [link]
 
 # nativefier for Windows
-nativefier -n "Name" -p windows "xxx.com"
+nativefier -n [name] -p windows [link]
 
 $ package: brew search
 $ casks: brew search --casks
