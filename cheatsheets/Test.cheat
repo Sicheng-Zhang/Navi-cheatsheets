@@ -18,7 +18,7 @@ nativefier -n [name] -p windows [link]
 # mutool: convert PDF to txt
 mutool draw -F txt file.pdf -o out.txt
 
-$ package: brew search
-$ casks: brew search --casks
-$ installed: brew list
-$ caskinstalled: brew cask list
+#$ package: brew search
+#$ casks: brew search --casks
+#$ installed: brew list
+#$ caskinstalled: brew cask list
