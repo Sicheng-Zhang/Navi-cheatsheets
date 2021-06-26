@@ -1,0 +1,8 @@
+% navi_cheatsheet
+
+# ps: display current processes
+ps h
+
+# rm: securely delete a file/folder by overwriting and increasing verbosity
+rm -Pv file
+rm -Pvrf folder

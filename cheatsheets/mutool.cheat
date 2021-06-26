@@ -1,0 +1,7 @@
+% navi_cheatsheet
+
+# mutool: convert pages 1-10 to PNG images:
+mutool convert -o image%d.png file.pdf 1-10
+
+# mutool: convert PDF to txt
+mutool draw -F txt file.pdf -o out.txt
