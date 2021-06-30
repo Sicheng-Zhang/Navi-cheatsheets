@@ -1,0 +1,4 @@
+% navi_cheatsheet
+
+# VARNA: run VARNA GUI
+java -jar PATH/TO/VARNAv3-93.jar &
