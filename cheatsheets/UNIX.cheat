@@ -6,3 +6,13 @@ ps h
 # rm: securely delete a file/folder by overwriting and increasing verbosity
 rm -Pv file
 rm -Pvrf folder
+
+# tar: create archive.tar from files
+tar -cvf archive.tar file1 file2
+
+# tar: list all the files in archive.tar
+tar -tvf archive.tar
+
+# tar: extract files from archive.tar
+tar -xf archive.tar
+
