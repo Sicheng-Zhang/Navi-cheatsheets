@@ -1,0 +1,4 @@
+% navi_cheatsheet
+
+# snap: update all the installed packages
+sudo snap refresh
