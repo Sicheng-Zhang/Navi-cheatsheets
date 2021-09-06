@@ -19,3 +19,9 @@ tar -xf archive.tar
 # ix: command line pastebin
 echo test.txt | curl -F 'f:1=<-' ix.io
 cat test.txt | ix
+
+# xargs: concatenate the lines of a file to one line
+cat file | xargs
+
+# sed: print the line 1 and 3 of a file
+sed -n '1p;3p' < file
