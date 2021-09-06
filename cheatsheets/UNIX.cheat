@@ -16,3 +16,6 @@ tar -tvf archive.tar
 # tar: extract files from archive.tar
 tar -xf archive.tar
 
+# ix: command line pastebin
+echo test.txt | curl -F 'f:1=<-' ix.io
+cat test.txt | ix
