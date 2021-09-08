@@ -20,8 +20,42 @@ tar -xf archive.tar
 echo test.txt | curl -F 'f:1=<-' ix.io
 cat test.txt | ix
 
-# xargs: concatenate the lines of a file to one line
-cat file | xargs
+# xargs: concatenate the lines of a file to 3-colunm lines
+cat file | xargs -n3
 
-# sed: print the line 1 and 3 of a file
-sed -n '1p;3p' < file
+# xargs: concatenate the lines of a file, using X as a delimiter
+cat file | xargs -dX
+
+# xargs: copy all the PNG file to "data/images":
+ls *.png | xargs -n1 -I {} cp {} /data/images
+
+
+# sed: print line 1 and 3 from a file
+sed -n '1p;3p' file
+
+# sed: replace all the "test" with "test2", starting at line N
+sed 's/test/test2/Ng' file
+
+# sed: delete all the lines from line 2 to the last line
+sed '2,$d' file
+
+# sed: search for all the words, replace them to [word] and print the replaced result
+sed -n 's/\w\+/[&]/gp'
+
+# sed: insert 'new line' before all the lines that start with 'test'
+sed '/^test/i\new line` file
+
+# sed: insert 'new line' after all the lines that start with 'test'
+sed '/^test/a\new line` file
+
+# sed: print last line and its line number
+sed -n '$p;$=' file
+
+# awk: print 'hellow world!' and output to file
+echo | awk '{printf("hello word!") > "file"}'
+
+# awk: print last line and its line number
+awk 'END{print NR; print }' file
+
+# wc: print number of lines for the file
+wc -l < file
