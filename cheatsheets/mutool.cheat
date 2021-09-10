@@ -5,3 +5,6 @@ mutool convert -o image%d.png file.pdf 1-10
 
 # mutool: convert PDF to txt
 mutool draw -F txt file.pdf -o out.txt
+
+# mutool: convert PNG images to PDF
+mutool convert -o out.pdf *.png
