@@ -1,7 +1,7 @@
 % navi_cheatsheet
 
 # pandoc: convert LaTeX to Word, keep citations as numeral (must have files file.bib and ieee.csl)
-pandoc -s main.tex --bibliography main.bib --csl ieee.csl -o main.docx
+pandoc -s main.tex --bibliography main.bib --citeproc --csl ieee.csl -o main.docx
 
 # pandoc: produce a formatted HTML file of a bibliography (must have ieee.csl)
 pandoc -s main.bib --citeproc --csl ieee.csl -o main.html
