@@ -62,3 +62,9 @@ wc -l < file
 
 # dmesg: show device drivers info
 dmesg | grep -i scsi
+
+# watch: watch the contents of a directory change
+watch -d ls -l
+
+# watch: watch the contents of a directory change, only for file "xxx"
+watch -d 'ls -l|grep xxx'
