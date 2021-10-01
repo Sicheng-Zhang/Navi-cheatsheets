@@ -1,7 +1,16 @@
 % navi_cheatsheet
 
-# ps: display current processes
+# ps: display current processes, no header
 ps h
+
+# ps: display processes for all users
+ps aux
+
+# ps: show all the processes for user xxx
+ps -u xxx
+
+# pkill: kill the process ABC from user xxx using its name
+pkill -u xxx ABC
 
 # rm: securely delete a file/folder by overwriting and increasing verbosity
 rm -Pv file
@@ -62,6 +71,9 @@ wc -l < file
 
 # dmesg: show device drivers info
 dmesg | grep -i scsi
+
+# view the status of all mounted file systems
+cat /proc/mounts
 
 # watch: watch the contents of a directory change
 watch -d ls -l
