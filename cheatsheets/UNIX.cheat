@@ -80,3 +80,8 @@ watch -d ls -l
 
 # watch: watch the contents of a directory that containing "xxx" change
 watch -d 'ls -l|grep xxx'
+
+# host, dig, nslookup: lookup full DNA info
+host -a xxx.com
+dig xxx.com
+nslookup xxx.com
