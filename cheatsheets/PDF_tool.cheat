@@ -1,5 +1,11 @@
 % navi_cheatsheet
 
+# qpdf: extract pages 1-10, drop metadata for the rest pages
+qpdf --empty --pages input.pdf 1-10 -- output.pdf
+
+# qpdf: merge multiple files
+qpdf --empty --pages file1.pdf file2.pdf -- output.pdf
+
 # mutool: convert pages 1-10 to PNG images:
 mutool convert -o image%d.png file.pdf 1-10
 
@@ -11,3 +17,6 @@ mutool convert -o out.pdf *.png
 
 # mutool: convert pages 1-10 to PNG images, rotate 90 degree, set the resolution to 200 dpi
 mutool convert -O rotate=90 resolution=200 -o image%d.png Plot.pdf 1-10
+
+# mutool: extract pages 1-10, (fonts, forms may not supported)
+mutool convert -o output.pdf input.pdf 1-10
