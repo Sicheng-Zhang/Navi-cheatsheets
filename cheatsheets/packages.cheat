@@ -1,4 +1,7 @@
 % navi_cheatsheet
 
+# pacman: list all explicitly installed packages
+pacman -Qe
+
 # snap: update all the installed packages
 sudo snap refresh
