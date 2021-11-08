@@ -3,5 +3,11 @@
 # pacman: list all explicitly installed packages
 pacman -Qe
 
+# pacman: update all packages
+pacman -Syu
+
+# pacman: list all pacakges that do not required as dependencies
+pacman -Qdt
+
 # snap: update all the installed packages
 sudo snap refresh
