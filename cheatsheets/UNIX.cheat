@@ -60,6 +60,10 @@ sed '/^test/a\new line` file
 # sed: print last line and its line number
 sed -n '$p;$=' file
 
+# sed: add a prefix string to the begining/end of each line
+sed -e 's/^/prefix/' file > newfile
+sed -e 's/$/prefix/' file > newfile
+
 # awk: print 'hellow world!' and output to file
 echo | awk '{printf("hello word!") > "file"}'
 
