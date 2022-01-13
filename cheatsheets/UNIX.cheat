@@ -88,6 +88,12 @@ watch -d ls -l
 # watch: watch the contents of a directory that containing "xxx" change
 watch -d 'ls -l|grep xxx'
 
+# grep: output the number of lines that contain a string "xxx"
+grep -c "xxx" file
+
+# grep: count the number of occurrences of string "xxx" in the file
+grep -o "xxx" file | wc -l
+
 # host, dig, nslookup: lookup full DNA info
 host -a xxx.com
 dig xxx.com
