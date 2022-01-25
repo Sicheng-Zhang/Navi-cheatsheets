@@ -104,3 +104,15 @@ find . -maxdepth 1 -mmin -5
 
 # find: find and delete all the files, e.g., ".DS_Store"
 find . -name ".DS_Store" -delete
+
+# cut: print column 3 from line 5 to 10
+cut -d ' ' -f3 file.txt | sed -n '5,10p' | xargs
+
+# sed: print 3rd to 8th line
+sed -n '3,8p' file.txt
+
+# sed: print Nth line from Mth line
+sed -n 'M~Np' file.txt
+
+# sed: print lines that contains "text"
+sed -n '/text/p' file.txt
