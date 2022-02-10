@@ -5,3 +5,6 @@ pandoc -s main.tex --bibliography main.bib --citeproc --csl ieee.csl -o main.doc
 
 # pandoc: produce a formatted HTML file of a bibliography (must have ieee.csl)
 pandoc -s main.bib --citeproc --csl ieee.csl -o main.html
+
+# pandoc: convert DOCX file to TXT file
+pandoc -f docx -t rst input.docx > output.txt
