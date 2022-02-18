@@ -116,3 +116,6 @@ sed -n 'M~Np' file.txt
 
 # sed: print lines that contains "text"
 sed -n '/text/p' file.txt
+
+# convert: resize image to 1080x720
+convert -resize 1080x720 input.png output.png
