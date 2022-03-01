@@ -20,3 +20,6 @@ mutool convert -O rotate=90 resolution=200 -o image%d.png Plot.pdf 1-10
 
 # mutool: extract pages 1-10, (fonts, forms may not supported)
 mutool convert -o output.pdf input.pdf 1-10
+
+# mutool: remove password protection
+mutool clean -p "myPassword" -D input.pdf output.pdf
