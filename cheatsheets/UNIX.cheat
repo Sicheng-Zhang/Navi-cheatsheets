@@ -25,6 +25,22 @@ tar -tvf archive.tar
 # tar: extract files from archive.tar
 tar -xf archive.tar
 
+# 7z: extract all files from the archive to one directory
+7za e archive.zip -oOUTPUT/
+
+# 7z: extract files with full paths from the archive to one directory
+7za x archive.zip -oOUTPUT/
+
+# 7z: add files from a folder to the archive (with/without Files/ prefix)
+7za a archive.zip Files/
+7za a archive.zip Files/*
+
+# 7z: update older files in the archive and add new files to the archive
+7za u archive.zip new_files
+
+# 7z: delete files *.bak from the archive
+7za d archive.zip *.bak -r
+
 # ix: command line pastebin
 echo test.txt | curl -F 'f:1=<-' ix.io
 cat test.txt | ix
