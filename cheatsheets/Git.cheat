@@ -2,3 +2,6 @@
 
 # git: save username and password (use personal token for pw)
 git config --global credential.helper store
+
+# git: commit using previous message
+git commit --amend --no-edit
