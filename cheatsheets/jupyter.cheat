@@ -4,10 +4,10 @@
 jupyter labextension list
 
 # jupyter: export PDF while hiding all the input code cells
-jupyter nbconvert path/to/your/ipynb --to=pdf --TemplateExporter.exclude_input=True
+jupyter nbconvert path/to/your/ipynb --to pdf --TemplateExporter.exclude_input=True
 
-# jupyter: export HTML with widgets saved
-jupyter nbconvert --to html
+# jupyter: export HTML with widgets saved, using the classic template, and hiding the codes
+jupyter nbconvert path/to/your/ipynb --to html --no-input --template classic
 
 # jupyter: update to the newest version
 sudo pip3 install --upgrade --force-reinstall --no-cache-dir jupyter
