@@ -12,3 +12,13 @@ jupyter nbconvert path/to/your/ipynb --to html --no-input --template classic
 # jupyter: update to the newest version
 sudo pip3 install --upgrade --force-reinstall --no-cache-dir jupyter
 sudo pip3 install --upgrade --force-reinstall --no-cache-dir jupyterlab
+
+# quarto: rendering the document to html
+quarto render input.qmd --to html
+
+# quarto: see live preview of the file
+quarto preview input.qmd
+
+# quarto: convert ipynb nootbook to qmd, and vice versa
+quarto convert input.ipynb
+quarto convert input.qmd
