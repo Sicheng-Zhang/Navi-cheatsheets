@@ -135,3 +135,7 @@ sed -n '/text/p' file.txt
 
 # convert: resize image to 1080x720
 convert -resize 1080x720 input.png output.png
+
+# shred: recursively shred all files in a directory
+find "path_to_dir" -type f -exec shred {} \;
+
