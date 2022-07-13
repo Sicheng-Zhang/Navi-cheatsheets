@@ -11,3 +11,10 @@ pacman -Qdt
 
 # snap: update all the installed packages
 sudo snap refresh
+
+# brew: list dependencies of installed packages
+brew deps --tree --installed
+
+# brew: list all pacakges that do not required as dependencies
+brew leaves
+
