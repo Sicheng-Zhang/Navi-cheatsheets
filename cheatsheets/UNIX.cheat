@@ -121,6 +121,23 @@ find . -maxdepth 1 -mmin -5
 # find: find and delete all the files, e.g., ".DS_Store"
 find . -name ".DS_Store" -delete
 
+# find: find all the files that newer than the file "test.txt"
+find . -type f -newer test.txt
+
+# find: find all the files that larger than, smaller than, and equal to 10MB
+find  . -type f -size +10M
+find  . -type f -size -10M
+find  . -type f -size 10M
+
+# find: move all the .txt files that are older than 30 days to ~/Documents/
+find . -type f -mtime +30 -name "*.txt" -exec mv {} ~/Documents/ \;
+
+# find: find all the .txt files and rename them to .txt_renamed files
+find . -type f -name '*.txt' -exec mv {} {}_renamed \;
+
+# find: find all the .PNG files and rename them to .png files
+find . -name "*.PNG" -exec bash -c 'mv "$1" "${1%.PNG}".png' - '{}' +
+
 # cut: print column 3 from line 5 to 10
 cut -d ' ' -f3 file.txt | sed -n '5,10p' | xargs
 
