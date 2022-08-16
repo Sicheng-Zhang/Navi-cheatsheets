@@ -156,3 +156,6 @@ convert -resize 1080x720 input.png output.png
 # shred: recursively shred all files in a directory
 find "path_to_dir" -type f -exec shred {} \;
 
+# g++: set compiler to the C++17 standard, enable compiler warnings
+g++ -std=c++17 -Wall -Wextra -Wpedantic input.cpp -o output
+
