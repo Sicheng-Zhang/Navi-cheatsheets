@@ -89,6 +89,9 @@ awk 'END{print NR; print }' file
 # awk: print 2nd and 4th line of the file
 cat file | awk '{ print $2 $4 }'
 
+# awk: print first column with separator -
+awk -F- '{print $1}' file
+
 # wc: print number of lines for the file
 wc -l < file
 
