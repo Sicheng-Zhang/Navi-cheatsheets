@@ -6,5 +6,9 @@ java -jar PATH/TO/VARNAv3-93.jar &
 # Blast: run blastn for input.fast, use sub.fast as the subject sequence
 blastn -subject sub.txt -query input.txt -task blastn
 
+# Blast: run blastn for input.fast, use sub.fast as the subject sequence, do not mask low complexity regions, find a match for at least 7 residues
+blastn -subject sub.txt -query input.txt -task blastn -outfmt 0 -dust no -word_size 7
+
 # RNAfold: run RNAfold on input.txt with temperature equals to 50 C and compute base pairing probabilities
 RNAfold -p -d2 --noLP --temp=$i input.txt
+
