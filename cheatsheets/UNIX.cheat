@@ -95,6 +95,9 @@ awk -F- '{print $1}' file
 # wc: print number of lines for the file
 wc -l < file
 
+# wc: count the number of files (not hidden files) in the current dir
+expr $(ls -l | wc -l) - 1
+
 # dmesg: show device drivers info
 dmesg | grep -i scsi
 
@@ -137,9 +140,6 @@ find . -type f -mtime +30 -name "*.txt" -exec mv {} ~/Documents/ \;
 
 # find: find all the .txt files and rename them to .txt_renamed files
 find . -type f -name '*.txt' -exec mv {} {}_renamed \;
-
-# find: find all the .PNG files and rename them to .png files
-find . -name "*.PNG" -exec bash -c 'mv "$1" "${1%.PNG}".png' - '{}' +
 
 # cut: print column 3 from line 5 to 10
 cut -d ' ' -f3 file.txt | sed -n '5,10p' | xargs
