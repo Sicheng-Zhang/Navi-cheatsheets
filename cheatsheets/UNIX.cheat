@@ -54,6 +54,11 @@ cat file | xargs -dX
 # xargs: copy all the PNG file to "data/images":
 ls *.png | xargs -n1 -I {} cp {} /data/images
 
+# ls: list files that match xxx or yyy
+ls -l | egrep -i "xxx|yyy"
+
+# ls: list files that match xxx or YYY with case sensitive
+ls -l | egrep "xxx|YYY"
 
 # sed: print line 1 and 3 from a file
 sed -n '1p;3p' file
