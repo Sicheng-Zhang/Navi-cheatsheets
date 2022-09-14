@@ -167,3 +167,9 @@ find "path_to_dir" -type f -exec shred {} \;
 # g++: set compiler to the C++17 standard, enable compiler warnings
 g++ -std=c++17 -Wall -Wextra -Wpedantic input.cpp -o output
 
+# g++: deactivate assertions
+g++ -DNDEBUG input.cpp -o output
+
+# g++: complie for gdb debugging
+g++ -g input.cpp -o output
+
