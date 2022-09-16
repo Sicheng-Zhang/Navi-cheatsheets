@@ -173,3 +173,8 @@ g++ -DNDEBUG input.cpp -o output
 # g++: complie for gdb debugging
 g++ -g input.cpp -o output
 
+# g++: use address sanitizer to detect memory corruptions
+g++ input.cpp -o output -fsanitize=address
+
+# g++: detect undefined behavior at runtime
+g++ input.cpp -o output -fsanitize=undefined
