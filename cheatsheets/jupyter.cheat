@@ -22,3 +22,10 @@ quarto preview input.qmd
 # quarto: convert ipynb nootbook to qmd, and vice versa
 quarto convert input.ipynb
 quarto convert input.qmd
+
+# jupytext: convert foo.py to ipynb notebook, pair the two files
+jupytext --to notebook foo.py
+jupytext --set-formats ipynb,py foo.ipynb
+
+# jupytext: update the paired notebook foo.ipynb and the script foo.py
+jupytext --sync foo.ipynb
