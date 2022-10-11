@@ -161,6 +161,10 @@ sed -n '/text/p' file.txt
 # convert: resize image to 1080x720
 convert -resize 1080x720 input.png output.png
 
+# convert: convert the full document or page 1 to PNG images
+convert -density 300 input.pdf -quality 150 output.png
+convert -density 300 input.pdf[0] -quality 150 output.png
+
 # shred: recursively shred all files in a directory
 find "path_to_dir" -type f -exec shred {} \;
 
