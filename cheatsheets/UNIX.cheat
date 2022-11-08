@@ -182,3 +182,6 @@ g++ input.cpp -o output -fsanitize=address
 
 # g++: detect undefined behavior at runtime
 g++ input.cpp -o output -fsanitize=undefined
+
+# xattr: solve the macOS error that an application is damaged
+xattr -cr /Applications/XXX.app
