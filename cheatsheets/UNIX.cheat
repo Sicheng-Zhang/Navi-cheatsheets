@@ -126,6 +126,9 @@ host -a xxx.com
 dig xxx.com
 nslookup xxx.com
 
+# find: find all the files with "xxx" in the filename
+find . -name "*xxx*"
+
 # find: list all files that have been modified after 5 minute
 find . -maxdepth 1 -mmin -5
 
