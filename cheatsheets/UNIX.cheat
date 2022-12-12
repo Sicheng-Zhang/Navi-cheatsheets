@@ -188,3 +188,7 @@ g++ input.cpp -o output -fsanitize=undefined
 
 # xattr: solve the macOS error that an application is damaged
 xattr -cr /Applications/XXX.app
+
+# tr: convert the string to lower case
+echo "TEST" | tr "[:upper:]" "[:lower:"]
+
