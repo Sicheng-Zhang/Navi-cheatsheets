@@ -85,6 +85,12 @@ sed -n '$p;$=' file
 sed -e 's/^/prefix/' file > newfile
 sed -e 's/$/prefix/' file > newfile
 
+# print even lines from the file
+sed -n 'n;p' file
+
+# print odd lines from the file
+sed -n 'p;n' file
+
 # awk: print 'hellow world!' and output to file
 echo | awk '{printf("hello word!") > "file"}'
 
