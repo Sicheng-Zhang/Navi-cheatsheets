@@ -8,3 +8,12 @@ pandoc -s main.bib --citeproc --csl ieee.csl -o main.html
 
 # pandoc: convert DOCX file to TXT file
 pandoc -f docx -t rst input.docx > output.txt
+
+# pandoc: convert markdown to PDF using a CSS style file
+pandoc -s input.md --css=style.css -t html5 -o output.pdf
+
+# pandoc: convert markdown to PDF using wkhmltopdf and setting up margins
+pandoc -t html5 -V margin-top=1in -V margin-bottom=1in -V margin-left=1in -V margin-right=1in -s input.md -o output.pdf
+
+# pandoc: convert markdown to PDF using xelatex engine with Arial fonts
+pandoc -s input.md -o output.pdf --latex-engine=xelatex -V mainfont="Arial"
