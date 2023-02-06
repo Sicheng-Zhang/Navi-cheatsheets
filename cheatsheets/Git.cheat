@@ -5,3 +5,10 @@ git config --global credential.helper store
 
 # git: commit using previous message
 git commit --amend --no-edit
+
+# git: remove a file from the cache
+git rm --cached filename
+
+# git: edit the commit
+git commit --amend -C HEAD
+
