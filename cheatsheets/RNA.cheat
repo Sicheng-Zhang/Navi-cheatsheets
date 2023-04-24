@@ -12,3 +12,9 @@ blastn -subject sub.txt -query input.txt -task blastn -outfmt 0 -dust no -word_s
 # RNAfold: run RNAfold on input.txt with temperature equals to 50 C and compute base pairing probabilities
 RNAfold -p -d2 --noLP --temp=$i input.txt
 
+# QRNAS: run with default parameters
+QRNA -i inputfile.pdb -o outputfile.pdb
+
+# QRNAS: run with the configuration file
+QRNA -c config.txt
+
