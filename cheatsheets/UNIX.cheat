@@ -210,3 +210,6 @@ echo "TEST" | tr "[:upper:]" "[:lower:"]
 # ssh: copy id_rsa.pub key to the remote host
 ssh-copy-id username@remote_host
 
+# ssh: list all running processes of user "user" on the server "user@sever"
+ssh user@server -t "ps h -u user"
+
