@@ -213,6 +213,9 @@ ssh-copy-id username@remote_host
 # ssh: list all running processes of user "user" on the server "user@sever"
 ssh user@server -t "ps h -u user"
 
+# du: show the disk usage at depth 1
+du -ch -d 1
+
 # rsync: transfer folder "test" on user@server to the local machine, exclude subfolder "data/" and show the process
 rsync -a --info=progress2 --exclude='data/' user@server:~/test/ ./
 
