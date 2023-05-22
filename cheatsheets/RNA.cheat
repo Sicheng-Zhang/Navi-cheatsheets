@@ -18,3 +18,9 @@ QRNA -i inputfile.pdb -o outputfile.pdb
 # QRNAS: run with the configuration file
 QRNA -c config.txt
 
+# LinearFold: run prediction "AUCG" and save the result to "out.txt"
+echo "AUCG" | ./lienarfold > out.txt
+
+# LinearFold: run prediction on sequences saved in the FASTA file "seq.fa", use Vienna RNAfold thermodynamic model.
+cat seq.fa | ./lienarfold --fasta -V > out.txt
+

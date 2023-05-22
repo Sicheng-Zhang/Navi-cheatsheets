@@ -162,7 +162,10 @@ find ./path/ -name *.txt -exec cp {} ./copy/ \;
 cut -d ' ' -f3 file.txt | sed -n '5,10p' | xargs
 
 # cut: extract 3rd string before a space
-echo "s1 s2 s3 s4" | cut -d" " -f3 # outputs s3
+echo "s1 s2 s3 s4" | cut -d " " -f3
+
+# cut: remove the first 3 chars of a string
+echo "s1 s2 s3 s4" | cut -c4-
 
 # sed: print 3rd to 8th line
 sed -n '3,8p' file.txt
