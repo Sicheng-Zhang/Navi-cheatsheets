@@ -85,11 +85,14 @@ sed -n '$p;$=' file
 sed -e 's/^/prefix/' file > newfile
 sed -e 's/$/prefix/' file > newfile
 
-# print even lines from the file
+# sed: print even lines from the file
 sed -n 'n;p' file
 
-# print odd lines from the file
+# sed: print odd lines from the file
 sed -n 'p;n' file
+
+# sed: insert "text" before the first line of the file
+sed -i '1 i\text' input.txt
 
 # awk: print 'hellow world!' and output to file
 echo | awk '{printf("hello word!") > "file"}'
@@ -221,4 +224,7 @@ du -ch -d 1
 
 # rsync: transfer folder "test" on user@server to the local machine, exclude subfolder "data/" and show the process
 rsync -a --info=progress2 --exclude='data/' user@server:~/test/ ./
+
+# while do: add a string "test" after each line in the file input.txt
+cat input.txt | while read line; do echo ${line}"test"; done
 
