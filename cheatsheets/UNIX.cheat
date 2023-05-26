@@ -19,6 +19,12 @@ rm -Pvrf folder
 # tar: create archive.tar from files
 tar -cvf archive.tar file1 file2
 
+# tar: create archive.tar.gz from files using gzip
+tar -czvf archive.tar.gz file1 file2
+
+# tar: create archive.tar from files using bzip2
+tar -cjvf archive.tar.bz2 file1 file2
+
 # tar: list all the files in archive.tar
 tar -tvf archive.tar
 
