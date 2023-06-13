@@ -18,3 +18,11 @@ brew deps --tree --installed
 # brew: list all pacakges that do not required as dependencies
 brew leaves
 
+# dpkg: install downloaded package at ~/Downloads
+dpkg -x pacakge.deb ~/Downloads
+
+# dnf: update the current system
+dnf upgrade --refresh
+
+# dnf: install the downloaded package
+dnf localinstall package.rpm
