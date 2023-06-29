@@ -24,3 +24,9 @@ echo "AUCG" | ./lienarfold > out.txt
 # LinearFold: run prediction on sequences saved in the FASTA file "seq.fa", use Vienna RNAfold thermodynamic model.
 cat seq.fa | ./lienarfold --fasta -V > out.txt
 
+# x3dna-dssr: extract base pairs from PDB file
+x3dna-dssr -i=input.pdb -o=output.txt --PAIR-ONLY
+
+# x3dna-dssr: analyze PDB file, output in JSON format
+x3dna-dssr -i=input.pdb -o=output.txt --json
+
