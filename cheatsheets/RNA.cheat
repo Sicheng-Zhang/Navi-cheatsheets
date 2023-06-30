@@ -30,3 +30,8 @@ x3dna-dssr -i=input.pdb -o=output.txt --PAIR-ONLY
 # x3dna-dssr: analyze PDB file, output in JSON format
 x3dna-dssr -i=input.pdb -o=output.txt --json
 
+# mafft: add unaligned fragmentary sequences into an existing alignment (ref.fa), keep the alignment length unchanged, preserve the residue cases
+mafft --auto --keeplength --preservecase --addfragments input.fa ref.fa > output.fa
+
+# mafft: add unaligned full-length sequences into an existing alignment (ref.fa), keep the alignment length unchanged, preserve the residue cases
+mafft --auto --keeplength --preservecase --add input.fa ref.fa > output.fa
