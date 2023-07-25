@@ -7,7 +7,7 @@ ps h
 ps aux
 
 # ps: show all the processes for user xxx
-ps -u xxx
+ps -w -u xxx
 
 # pkill: kill the process ABC from user xxx using its name
 pkill -u xxx ABC
@@ -111,6 +111,9 @@ cat file | awk '{ print $2 $4 }'
 
 # awk: print first column with separator -
 awk -F- '{print $1}' file
+
+# awk: print the 4th and the last columns in the file
+awk '{ print $4, $NF}' file
 
 # wc: print number of lines for the file
 wc -l < file
@@ -230,7 +233,7 @@ echo "TEST" | tr "[:upper:]" "[:lower:"]
 ssh-copy-id username@remote_host
 
 # ssh: list all running processes of user "user" on the server "user@sever"
-ssh user@server -t "ps h -u user"
+ssh user@server -t "ps h -w -u user"
 
 # du: show the disk usage at depth 1
 du -ch -d 1
