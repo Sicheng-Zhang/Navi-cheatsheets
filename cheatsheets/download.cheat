@@ -1,0 +1,5 @@
+% navi_cheatsheet
+
+# youtube-dl: download audio in mp3 format, use embed thumbnail as cover, get the best quality
+youtube-dl -x --audio-format mp3 --embed-thumbnail --audio-quality 0 'https://xxxxxx'
+
