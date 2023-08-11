@@ -164,6 +164,9 @@ find  . -type f -size 10M
 # find: move all the .txt files that are older than 30 days to ~/Documents/
 find . -type f -mtime +30 -name "*.txt" -exec mv {} ~/Documents/ \;
 
+# find: find all the files that do not contain "test" in the filename and are older than 60 minutes
+find . -type f -mmin +60 ! -name "*test*"
+
 # find: find all the .txt files and rename them to .txt_renamed files
 find . -type f -name '*.txt' -exec mv {} {}_renamed \;
 
@@ -243,4 +246,9 @@ rsync -a --info=progress2 --exclude='data/' user@server:~/test/ ./
 
 # while do: add a string "test" after each line in the file input.txt
 cat input.txt | while read line; do echo ${line}"test"; done
+
+# crond: start, restart, and reload the service
+/sbin/service crond start
+/sbin/service crond restart
+/sbin/service crond reload
 
