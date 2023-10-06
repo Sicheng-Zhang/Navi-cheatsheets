@@ -204,6 +204,9 @@ convert -density 300 input.pdf[0] -quality 150 output.png
 # convert: resize the PDF file, including text and figures
 convert -density 150 -resize 75% input.pdf output.pdf
 
+# convert: convert JPEG image to PNG format, use resolution 600X600
+convert -resize 600x600 input.jpeg output.png
+
 # gs: resize the PDF file, keep vector graphic and text intact (ebook: 150 dpi; printer: 300 dpi)
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
