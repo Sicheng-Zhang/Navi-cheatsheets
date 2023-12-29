@@ -255,3 +255,6 @@ cat input.txt | while read line; do echo ${line}"test"; done
 /sbin/service crond restart
 /sbin/service crond reload
 
+# cal: show calender for 3 months, use Julian dates
+cal -3 -j
+
