@@ -258,3 +258,6 @@ cat input.txt | while read line; do echo ${line}"test"; done
 # cal: show calender for 3 months, use Julian dates
 cal -3 -j
 
+# Print lines in the file "text.txt" at a customized speed
+perl -pe "system 'sleep .07'" test.txt
+
