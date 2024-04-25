@@ -1,0 +1,14 @@
+% navi_cheatsheet
+
+# pymol: load PDB file and run the commands
+pymol input.pdb -d "as cartoon; bg_color white"
+
+# pymol: run in CLI mode, get the sequences from PDB files
+pymol *.pdb -c -d "from pymol import cmd; print(cmd.get_fastastr('all'))"
+
+# pymol: load PDB file,  do not use .pymolrc settings
+pymol input.pdb -k
+
+# pymol: load PDB files and run Python script
+pymol *.pdb -r input.py
+

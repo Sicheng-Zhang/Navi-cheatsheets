@@ -263,5 +263,5 @@ perl -pe "system 'sleep .07'" test.txt
 
 # Rename files test.txt, test2.txt, test3.txt to new.txt, new2.txt, new3.txt
 rename -v test new test*.txt # C version
-rename -v "s/test/new" test*.txt #Perl version
+rename -v "s/test/new/g" test*.txt #Perl version
 
