@@ -268,3 +268,7 @@ rename -v "s/test/new/g" test*.txt #Perl version
 # Zip: unzip .zip files in the current folder, do not create folders, replace all files with same name
 unzip -j -o *.zip
 
+# systemctl: check the status of current services
+systemctl --user status
+systemctl status
+
