@@ -97,8 +97,11 @@ sed -n 'n;p' file
 # sed: print odd lines from the file
 sed -n 'p;n' file
 
-# sed: insert "text" before the first line of the file
-sed -i '1 i\text' input.txt
+# sed: insert "text" before the 10th line of the file
+sed '10 i\text' input.txt
+
+# sed: delete line 2-5 and line 10
+sed -e '2,5d;10d' file
 
 # awk: print 'hellow world!' and output to file
 echo | awk '{printf("hello word!") > "file"}'

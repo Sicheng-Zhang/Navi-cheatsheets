@@ -30,3 +30,9 @@ dnf localinstall package.rpm
 # dnf: install fedora 37 with gcc 12 in a specified directory
 dnf install --releasever=37 --installroot=~/path/gcc-from-fedora37/ gcc gcc-c++
 
+# zypper: remove a repo
+zypper rr 'SUSE:SLE-15-SP1:GA'
+
+# zypper: update all packages
+zypper up
+
