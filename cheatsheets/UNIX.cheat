@@ -275,3 +275,5 @@ unzip -j -o *.zip
 systemctl --user status
 systemctl status
 
+# nohup: direct the output messages to the file "output.txt"
+nohup ls ./* &> output.txt &
