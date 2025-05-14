@@ -35,3 +35,7 @@ mafft --auto --keeplength --preservecase --addfragments input.fa ref.fa > output
 
 # mafft: add unaligned full-length sequences into an existing alignment (ref.fa), keep the alignment length unchanged, preserve the residue cases
 mafft --auto --keeplength --preservecase --add input.fa ref.fa > output.fa
+
+# maxit: convert PDB to CIF format and report stereochemical issues
+maxit -input input.pdb -output -output output.cif -o 1 -log logfile
+
