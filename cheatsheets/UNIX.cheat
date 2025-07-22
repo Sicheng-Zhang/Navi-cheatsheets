@@ -277,3 +277,7 @@ systemctl status
 
 # nohup: direct the output messages to the file "output.txt"
 nohup ls ./* &> output.txt &
+
+# nohup: direct output messages to out.log, error messages to out.err
+nohup ls ./* > out.log 2> out.err &
+
